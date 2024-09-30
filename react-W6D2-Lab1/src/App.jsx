@@ -39,8 +39,8 @@ function App() {
     });
   }
   return (
-    <div className={`flex justify-evenly items-center w-full h-screen ${isDark ? "bg-slate-900" : "bg-white"} `}>
-      <div className={`flex flex-col justify-evenly items-center rounded-xl w-[50vw] h-[60vh] gap-4 ${isDark ? "bg-slate-200" : "bg-slate-400"}`}>
+    <div className={`flex justify-evenly items-center w-full h-screen ${isDark ? "bg-slate-900" : "bg-white"} max-sm:flex-col`}>
+      <div className={`flex flex-col justify-evenly items-center rounded-xl w-[50vw] h-[60vh] gap-4 max-sm:w-[90vw] max-sm:h-[45vh] ${isDark ? "bg-slate-200" : "bg-slate-400"}`}>
         <div className='w-[100%] flex justify-start items-start pl-5 pt-3'>
           <button className={`btn rounded-[50%] border-none ${isDark ? "bg-slate-400" : "bg-slate-950"}`} onClick={changeMode}>
             <svg
@@ -72,7 +72,7 @@ function App() {
             <div className='text-xl text-black'>{number2}</div>
           </div>
         </div>
-        <div className='flex justify-evenly items-center gap-3'>
+        <div className='flex justify-evenly flex-wrap items-center gap-3'>
           <button className='btn bg-blue-300 hover:bg-white text-black w-24' onClick={() => { operation("add") }}>add</button>
           <button className='btn bg-yellow-200  hover:bg-white text-black w-24' onClick={() => { operation("subtract") }}>subtract</button>
           <button className='btn bg-green-300  hover:bg-white text-black w-24' onClick={() => { operation("multiply") }}>multiply</button>
@@ -83,7 +83,7 @@ function App() {
           <div className='text-xl text-black'>{result}</div>
         </div>
       </div>
-      <div className={`flex flex-col justify-evenly items-center rounded-xl w-[40vw] h-[60vh] gap-4 ${isDark ? "bg-slate-200" : "bg-slate-400"}`}>
+      <div className={`flex flex-col justify-evenly items-center rounded-xl w-[40vw] h-[60vh] gap-4 max-sm:w-[90vw] max-sm:h-[45vh] ${isDark ? "bg-slate-200" : "bg-slate-400"}`}>
         <button className={`btn border-none ${isDark ? "bg-slate-400" : "bg-zinc-700"} ${isDark ? "text-black" : "text-white"}`}
           onClick={changingImageIndex}>Change Image</button>
         <img src={images[currImage]} />
